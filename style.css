@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(10, 10, 24);
+    overflow: hidden;
+}
+
+.desc {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.desc h1 {
+    color: white
+}
+
+.desc span {
+    color:  rgb(148, 3, 3)
+}
+
+@media screen and (max-width: 626px) {
+    .desc h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 406px) {
+    .desc h1 {
+        font-size: 21px;
+    }
+}
+
+.container  {
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.container input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(148, 3, 3);
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+
+.container button {
+    width: 100%;
+    height: 50px;
+    background: rgb(148, 3, 3);
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+#imgBox {
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#imgBox img {
+    width: 100%;
+    padding: 10px;
+}
+
+#imgBox.show-img {
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error {
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+footer {
+    width: 100%;
+    color: white;
+    position: absolute; 
+    bottom: 0;
+    text-align: center;
+    /* left: 45%; */
+    padding: 2rem;
+}
+
+@media screen and (max-width: 542px) {
+    footer h1 {
+    padding: 1rem;
+    font-size: 26px;
+}
+}
+
+@media screen and (max-width: 414px) {
+    footer h1 {
+    padding: 1rem;
+    font-size: 19px;
+}
+}
+
+footer h1 {
+    padding: 1rem;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    list-style: none;
+    padding: .5rem 2rem;
+}
+
+footer ul li a {
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+footer ul li a:hover {
+    color:rgb(148, 3, 3)
+}
